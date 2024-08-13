@@ -1,0 +1,130 @@
+1  apt update -y
+    2  apt install tree
+    3  apt install git
+    4  clear
+    5  apt install docker.io
+    6  git init
+    7  git clone https://github.com/QA-SC/dockercompose.git
+    8  ls
+    9  tree
+   10  cd dockercompose/
+   11  tree
+   12  cat ./example1/one/Dockerfile
+   13  apt install docker-compose
+   14  service docker status
+   15  clear
+   16  docker-compose up -d
+   17  cd dockercompose/
+   18  cd example1/
+   19  ls
+   20  docker-compose up -d
+   21  docker images
+   22  docker ps -a
+   23  chmod 777 run.sh
+   24  ls
+   25  cd one/
+   26  ls
+   27  chmod 777 run.sh
+   28  cd ..
+   29  cd two/
+   30  lear
+   31  clear
+   32  cd
+   33  rm-rf dockercompose/
+   34  rm -rf dockercompose/
+   35  ls
+   36  mkdir dockercompose
+   37  cd dockercompose/
+   38  mkdir example1
+   39  cd example1/
+   40  mkdir one1
+   41  cd one1/
+   42  vi Dockerfile
+   43  vi run.sh
+   44  ./run.sh
+   45  sudo ./run.sh
+   46  chmod 777 run.sh
+   47  ./run.sh
+   48  vi run.sh
+   49  ./run.sh
+   50  vi run.sh
+   51  ls
+   52  cd ..
+   53  mkdir two
+   54  cd two/
+   55  vi Dockerfile
+   56  vi run.sh
+   57  chmod 777 run.sh
+   58  ./run.sh
+   59  ./run.sh
+   60  ls
+   61  ./run.sh
+   62  ./run.sh
+   63  vi run.sh
+   64  ./run.sh
+   65  cd ..
+   66  tree
+   67  vi docker-compose.yaml
+   68  docker-compose
+   69  docker-compose up -d
+   70  vi docker-compose.yaml
+   71  docker-compose up -d
+   72  vi docker-compose.yaml
+   73  docker-compose up -d
+   74  ls
+   75  vi docker-compose.yaml
+   76  ls
+   77  docker-compose up -d
+   78  docker ps
+   79  docker logs -f
+   80  docker images
+   81  docker logs
+   82  docker-compose down
+   83  docker ps
+   84  docker-compose up -d one
+   85  docker ps
+   86  docker images
+   87  docker run -d nginex
+   88  docker run -d nginix
+   89  docker run -d nginx
+   90  ls
+   91  docker ps
+   92  docker compose -ps
+   93  docker-compose -ps
+   94  docker-compose ps
+   95  docker logs
+   96  docker logs -f
+   97  docker logs -f one
+   98  docker logs -f example1_one_1
+   99  history
+  100  clear
+  101  docker-compose logs -f
+  102  docker-compose
+  103  docker-compose up -d
+  104  docker-compose logs -f
+  105  clear
+  106  history
+  107  ls
+  108  cd
+  109  ls
+  110  git status
+  111  cd dockercompose/
+  112  git status
+  113  cd example1/
+  114  docker-compose logs -f two
+  115  docker-compose ps
+  116  docker-compose  rm
+  117  docker-compose images
+  118  docker-compose up -d
+  119  docker-compose iages
+  120  docker-compose images
+  121  history
+  122  clear
+  123  docker-compose build
+  124  docker-compose ps
+  125  docker-compose exec one
+  126  ls
+  127  docker-compose exec one /bin/bash
+  128  docker-compose exec one1 /bin/bash
+  129  docker-compose exec two /bin/bash
+  130  history
