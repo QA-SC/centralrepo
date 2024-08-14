@@ -1,0 +1,149 @@
+ 1  apt update
+    2  clear
+    3  apt install docker.io
+    4  clear
+    5  docker swarm
+    6  which docker swarm
+    7  swarm status
+    8  clean
+    9  clear
+   10  docker infor
+   11  docker info |grep swarm
+   12  docker info |grep swarm -i
+   13  docker swarm init
+   14  docker swarm join --token SWMTKN-1-5xit0n2pvo7yktpetvwesru3nidpiy09d5i3uk8r9adeykt004-apetxcwo7tv420wp4migyuqku 172.31.39.171:2377
+   15  clear
+   16  docker node ls
+   17  docker swarm ls
+   18  clear
+   19  apt uninstall docker.io
+   20  rm -rf  docker.io
+   21  ls
+   22  which docker
+   23  apt-get purge --auto-remove packagenameapt-get purge --auto-remove docker.io
+   24  y
+   25  apt-get purge --auto-remove docker.io
+   26  clear
+   27  which docker
+   28  clear
+   29  apt install docker.io
+   30  clear
+   31  docker swarm init
+   32  service docker start
+   33  systemctl docker start
+   34  systemctl start docker.io
+   35  systemctl start docker
+   36  docker swarm init
+   37  docker node
+   38  docker nofde ls
+   39  docker node ls
+   40  clear
+   41  docker node ls
+   42  docker swarm init
+   43  docker swarm leave
+   44  clear
+   45  docker node ls
+   46  docker service create -p 80:80 --name web nginx
+   47  ls
+   48  docker ps
+   49  docker node scale web =3
+   50  docker swarm scale web =3
+   51  docker scale web =3
+   52  clear
+   53  docker node ls
+   54  docker ps
+   55  docker service ps web
+   56  docker service ps
+   57  docker service ps web
+   58  docker service scale web =3
+   59  docker service scale web=3
+   60  docker ps
+   61  docker service ps web
+   62  docker service rm web
+   63  docker service ps web
+   64  docker service create -p 80:80 3 --name web nginx
+   65  docker service ps
+   66  docker service ps web
+   67  docker service create -p 80:80 --replicas 3 --name web nginx
+   68  docker service create -p 80:80 --replicas=3 --name web nginx
+   69  docker service create -p 80:80 --name web nginx
+   70  docker ps
+   71  docker service ls
+   72  docker service rm peaceful_antonelli
+   73  docker service ls
+   74  docker service create -p 80:80 3  --name web nginx
+   75  docker service create -p 80:80 --name web nginx
+   76  docker service rm peaceful_antonelli
+   77  docker service ls
+   78  docker service rm unruffled_swartz
+   79  docker service create -p 80:80 --name web nginx
+   80  docker service ls
+   81  docker service scale =3
+   82  docker service scale=3
+   83  docker service web scale=3
+   84  docker service scale=3
+   85  docker service scale web =3
+   86  docker service scale web=3
+   87  docker service down
+   88  docker service down web
+   89  docker service ps
+   90  docker service ls
+   91  docker node ls
+   92  docker service ps web
+   93  clear
+   94  docker ps
+   95  docker service ps
+   96  docker service
+   97  docker service ps web
+   98  docker service ls
+   99  cleatr
+  100  clear
+  101  docker service scale web=2
+  102  docker service ps
+  103  docker service ls
+  104  docker service ps web
+  105  docker service ls
+  106  docker node ls
+  107  clear
+  108  docker service ps web
+  109  docker service inspect --pretty web
+  110  docker service inspect --pretty web -coulnm -t
+  111  docker service inspect --pretty web -coulnm
+  112  docker service inspect --pretty web -colunm
+  113  docker service inspect --pretty web -colunm t
+  114  docker service inspect --pretty web -colunm -t
+  115  docker service inspect --pretty web -coulnm -t
+  116  docker inspect
+  117  docker inspect web1
+  118  docker service ls
+  119  docker service ps web
+  120  docker inspect jyo5pfejhyy5
+  121  clear
+  122  docker service ps web
+  123  docker service rm web
+  124  docker service ls
+  125  history
+  126  clear
+  127  docker node ls
+  128  docker create service -p 80:80 --name harpal ubuntu
+  129  docker create service -p 80:80 --name harpal nginx
+  130  docker service create -p 80:80 --name harpal ubuntu
+  131  docker service ps harpal
+  132  docker service ls
+  133  docker node ls
+  134  docker servoce ps harpal
+  135  docker service ps harpal
+  136  docker service rm harpal
+  137  docker images
+  138  docker service create -p 80:80 --name harpal ubuntu
+  139  docker service ps wh9drmikf87f6fqftte0e34ak
+  140  docker service rm harpal
+  141  docker ps
+  142  docker service create -p 80:80 --name sai nginx
+  143  docker service ps sai
+  144  docker node ls
+  145  docker service scale sai=3
+  146  docker service ps sai
+  147  docker service sl
+  148  docker service ls
+  149  history
