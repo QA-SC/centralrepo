@@ -1,0 +1,93 @@
+ 1  apt update
+    2  clear
+    3  apt install docker.io
+    4  clear
+    5  docker swarm
+    6  which docker swarm
+    7  swarm status
+    8  clean
+    9  clear
+   10  docker infor
+   11  docker info |grep swarm
+   12  docker info |grep swarm -i
+   13  docker swarm init
+   14  docker swarm join --token SWMTKN-1-5xit0n2pvo7yktpetvwesru3nidpiy09d5i3uk8r9adeykt004-apetxcwo7tv420wp4migyuqku 172.31.39.171:2377
+   15  docker swarm ls
+   16  clear
+   17  apt uninstall docker.io
+   18  rm -rf  docker.io
+   19  ls
+   20  which docker
+   21  apt-get purge --auto-remove docker.io
+   22  clear
+   23  which docker
+   24  clear
+   25  apt install docker.io
+   26  clear
+   27  docker swarm join --token SWMTKN-1-1dvd3918f20mw1q8l9k8iw6q5zvq9vunyt6vk541pn3i7dac4i-8lvh14bc766w8b8xp4ts8a7r5 172.31.39.171:2377
+   28  systemctl start docker
+   29  docker swarm join --token SWMTKN-1-1dvd3918f20mw1q8l9k8iw6q5zvq9vunyt6vk541pn3i7dac4i-8lvh14bc766w8b8xp4ts8a7r5 172.31.39.171:2377
+   30  clear
+   31  docker node ls
+   32  docker service create --replicas 3 --name web nginx
+   33  docker service ps web
+   34  clear
+   35  enable drain mode - task should not get execute in manager
+   36  docker node update --avalibility drain ip-172-31-47-214
+   37  docker node update --availibility drain ip-172-31-47-214
+   38  docker node update --availbility drain ip-172-31-47-214
+   39  docker node update --availability drain ip-172-31-47-214
+   40  docker ps
+   41  docker service ps web
+   42  docker node update --availability active ip-172-31-47-214
+   43  roll back and roll update
+   44  docker service update --image nginx:1.17.10 web
+   45  docker service ps web
+   46  history
+   47  ls
+   48  clear
+   49  docker service update --rollback web
+   50  docker service ps web
+   51  docker service ls
+   52  docker service ps web
+   53  global mode vs replicted mode
+   54  clear
+   55  docker service create --name hari nginx --globalmode
+   56  docker service rm hari
+   57  docker service rm web
+   58  docker service rm sai
+   59  docker service create -p 80:80 --name web nginx --global
+   60  docker service rm web
+   61  docker service create -p 80:80 --name web nginx --mode global
+   62  docker service ps web
+   63  docker service rm web
+   64  docker service create -p 80:80 --name web --mode global nginx
+   65  docker service ps
+   66  docker service ps web
+   67  clear
+   68  imperative vs declartive mode : defineing stack
+   69  history
+   70  clear
+   71  vi docker-compase.yml
+   72  docker stack deploy -c docker-compase.yml web
+   73  docker stack deploy -c docker-compase.yml
+   74  docker stack deploy -c docker-compase.yml web
+   75  vi docker-compase.yml
+   76  docker stack deploy -c docker-compase.yml web
+   77  docker stack deploy -c docker-compase.yml webe
+   78  vi docker-compase.yml
+   79  docker stack deploy -c docker-compase.yml webe
+   80  vi docker-compase.yml
+   81  docker stack deploy -c docker-compase.yml webe
+   82  vi docker-compase.yml
+   83  docker stack deploy -c docker-compase.yml webe
+   84  vi docker-compase.yml
+   85  docker stack deploy -c docker-compase.yml webe
+   86  vi docker-compase.yml
+   87  docker stack deploy -c docker-compase.yml webe
+   88  docker service ls
+   89  docker service rm web
+   90  docker stack deploy -c docker-compase.yml webe
+   91  docker service ps webe_demoweb
+   92  ls
+   93  history
