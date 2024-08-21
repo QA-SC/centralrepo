@@ -187,4 +187,149 @@
   187  git init
   188  cd ..
   189  history
+ 225  kubectl get pods
+  226  kubectl delete pod labels1
+  227  kubectl delete pod
+  228  kubectl delete pod nodelabel
+  229  kubectl delete pod testingpod
+  230  kubectl delete pod nodelabel
+  231  kubectl delete pod nodelabel
+  232  kubectl get pods
+  233  kubectl delete pod lebels1
+  234  ls
+  235  cd centralrepo/
+  236  kubectl
+  237  kubectl get pods
+  238  clear
+  239  kubectl label node minikube mynode-
+  240  kubectl decribe node minikube
+  241  yes
+  242  kubectl describe node minikube
+  243  clear
+  244  cd folder1/
+  245  cd centralrepo/
+  246  ls
+  247  vi rc.yml
+  248  kubectl apply -f rc.yml
+  249  vi rc.yml
+  250  kubectl apply -f rc.yml
+  251  vi rc.yml
+  252  kubectl apply -f rc.yml
+  253  vi rc.yml
+  254  kubectl apply -f rc.yml
+  255  vi rc.yml
+  256  kubectl apply -f rc.yml
+  257  vi rc.yml
+  258  kubectl apply -f rc.yml
+  259  ls\
+  260*
+  261  kubectl delete pod myreplicacontroller-l2s2d
+  262  kubectl get pods
+  263  vi rc1.yml
+  264  kubectl apply -f rc1.yml
+  265  vi rc1.yml
+  266  kubectl apply -f rc1.yml
+  267  vi rc1.yml
+  268  kubectl apply -f rc1.yml
+  269  vi rc1.yml
+  270  kubectl apply -f rc1.yml
+  271  vi rc1.yml
+  272  kubectl apply -f rc1.yml
+  273  vi rc1.yml
+  274  kubectl apply -f rc1.yml
+  275  vi rc1.yml
+  276  kubectl apply -f rc1.yml
+  277  vi rc1.yml
+  278  kubectl apply -f rc1.yml
+  279  vi rc1.yml
+  280  kubectl apply -f rc1.yml
+  281  kubectl get pods
+  282  kubectl scale rc myreplicacontroller --replicas=3
+  283  kubectl get pods
+  284  kubectl scale rc myreplicacontroller --replicas=1
+  285  kubectl get pods
+  286  kubectl scare rc myreplication2 --replicas=3 #scale the pods
+  287  kubectl scale rc myreplication2 --replicas=3 #scale the pods
+  288  kubectl get pods
+  289  vi rc3.yml
+  290  kubectl apply -f rc2
+  291  kubectl apply -f rc3.yml
+  292  vi rc3.yml
+  293  kubectl apply -f rc3.yml
+  294  vi rc3.yml
+  295  kubectl apply -f rc3.yml
+  296  vi rc3.yml
+  297  kubectl apply -f rc3.yml
+  298  vi rc3.yml
+  299  kubectl apply -f rc3.yml
+  300  kubectl get pods
+  301  kubectl delete pod rc3.yml
+  302  kubectl delete pod -f rc3.yml
+  303  kubectl logs -f myreplication2-pmvbn
+  304  kubectl logs -f myreplication2
+  305  kubectl logs -f myreplication2-pmvbn
+  306  kubectl get all
+  307  kubectl logs -f replicationcontroller/
+  308  kubectl logs -f replicationcontroller
+  309  kubectl logs -f replicationcontroller/myreplcation3
+  310  kubectl logs -f
+  311  kubectl get pods -l myname=karan
+  312  kubectl get pods -l myname=harpal
+  313  kubectl logs -l  myname=harpal
+  314  kubectl logs -l  myname=karan
+  315  kubectl get all
+  316  kubectl exec pod myreplcation3-fhllr -c -it /bin/bash
+  317  kubectl get pod myreplcation3-fhllr
+  318  kubectl get pod =o wide myreplcation3-fhllr
+  319  kubectl get pod myreplcation3-fhllr -o wide
+  320  kubectl describe pod myreplcation3-fhllr -o wide
+  321* kubectl exec -c
+  322  kubectl exec pod myreplcation3-fhllr cvwd0004  -c -it /bin/bash
+  323  kubectl exec pod -c -it myreplcation3-fhllr cvwd0004 -- /bin/bash
+  324  kubectl exec -it myreplication3-fhllr -c cvwd0004 -- /bin/bash
+  325  kubectl exec -itmyreplcation3-fhllr -c cvwd0004 -- /bin/bash
+  326  kubectl exec -it myreplcation3-fhllr -c cvwd0004 -- /bin/bash
+  327  kubectl get all
+  328  kubectl describe myreplcation3
+  329  kubectl describe pod replicationcontroller
+  330  kubectl describe pod replicationcontroller/myreplcation3
+  331  kubectl describe pod replicationcontroller/myreplcation3
+  332  kubectl describe pod myreplcation3
+  333  kubectl exec -it myreplcation3 -c cvwd0004 -- /bin/bash
+  334  kubectl exec pod -it myreplcation3 -c cvwd0004 -- /bin/bash
+  335  kubectl get all
+  336  kubectl describe pod myreplication2
+  337  kubectl exec pod -it myreplication2 -c cv002 -- /bin/bash
+  338  kubectl exec -it myreplication2 -c cv002 -- /bin/bash
+  339  kubectl exec -it myreplication2-hdqxs -c cv002 -- /bin/bash
+  340  kubectl exec -it myreplication2-hdqxs -c cv002 -- /bin/bash #get inside a container
+  341  vi rc4.yml
+  342  kubectl apply -f rc4.yml
+  343  vi rc4.yml
+  344  kubectl apply -f rc4.yml
+  345  vi rc4.yml
+  346  kubectl apply -f rc4.yml
+  347  vi rc4.yml
+  348  kubectl apply -f rc4.yml
+  349  vi rc4.yml
+  350  kubectl apply -f rc4.yml
+  351  vi rc4.yml
+  352  kubectl apply -f rc4.yml
+  353  vi rc4.yml
+  354  kubectl apply -f rc4.yml
+  355  vi rc4.yml
+  356  kubectl apply -f rc4.yml
+  357  vi rc4.yml
+  358  kubectl apply -f rc4.yml
+  359  vi rc4.yml
+  360  kubectl apply -f rc4.yml
+  361  vi rc4.yml
+  362  kubectl apply -f rc4.yml
+  363  kubectl get all
+  364  vi rc4.yml
+  365  git status
+  366  git add .
+  367  git commit -m "replicationcontrolling"
+  368  git push
+  369  history
 
