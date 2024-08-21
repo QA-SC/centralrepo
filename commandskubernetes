@@ -332,4 +332,9 @@
   367  git commit -m "replicationcontrolling"
   368  git push
   369  history
+378  kubectl get all
+  379  kubectl get rc
+  380  kubectl delete rc --all
+  381  kubectl get rc
+  382  kubectl get all
 
