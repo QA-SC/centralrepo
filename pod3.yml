@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod3
+  annotations:
+    description: "This is a DEV container"
+spec:
+  containers:
+  - name: dev
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo harpalsingh2; sleep 3; done"]
+    env: 
+    - name: MYNAME
+      value: Harpal
+   
+   

@@ -1,0 +1,190 @@
+1  apt  update -y
+    2  apt install docker.io
+    3  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    4  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+    5  minikube start
+    6  minikube start --force
+    7  chown -R $USER $HOME/.kube $HOME/.minikube/
+    8  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+    9  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   10  chmod +x kubectl
+   11  mkdir -p ~/.local/bin
+   12  mv ./kubectl ~/.local/bin/kubectl
+   13  kubectl version --client
+   14  kubectl version --client --output=yaml
+   15  minikube start --force
+   16  kubectl get pods
+   17  vi pod-test1.yaml
+   18  kubectl apply pod-test1.yaml
+   19  kubectl apply -h  pod-test1.yaml
+   20  vi pod-test1.yaml
+   21  kubectl apply pod-test1.yaml
+   22  kubectl create pod-test1.yaml
+   23  kubectl create -f pod-test1.yaml
+   24  vi pod-test1.yaml
+   25  kubectl create -f pod-test1.yaml
+   26  kubectl get pods
+   27  kubectl get -o wide
+   28  kubectl get -o -wide
+   29  kubectl get -O -wide
+   30  kubectl get -O wide
+   31  kubectl get pod -O wide
+   32  kubectl get pod -O -wide
+   33  kubectl get pod -o -wide
+   34  kubectl get pod -o wide
+   35  kubectl get po
+   36  clear
+   37  kubectl get po -o wide
+   38  kubectl get po -o wide #more info for pods
+   39  kubectl describe testpod #more details for pod
+   40  kubectl describe pod testpod #more details for pod
+   41  clear
+   42  kubectl logs -f testpod c00
+   43  kubectl logs -f testpod
+   44  vi pod-test1.yaml
+   45  kubectl apply -f pod-test1.yaml
+   46  kubectl logs -f testpod
+   47  kubectl creat -f pod-test1.yaml
+   48  kubectl create -f pod-test1.yaml
+   49  kubectl delete -f pod-test1.yaml
+   50  kubectl create -f pod-test1.yaml
+   51  kubectl logs -f testpod
+   52  kubectl delete -f pod-test1.yaml
+   53  vi pod-test1.yaml
+   54  kubectl create -f pod-test1.yaml
+   55  kubectl logs -f testpod
+   56  vi pod2.yml
+   57  kubectl apply -f pod2.yml
+   58  kubectl get po
+   59  kubectl get po testpod2
+   60  kubectl logs -f
+   61  kubectl logs -f testpod2
+   62  kubectl logs -f testpod2 c003
+   63  clear
+   64  kubectl exec testpod 2 - c003
+   65  kubectl exec testpod2 -c c003
+   66  kubectl exec testpod2 -c c003 --ls
+   67  kubectl logs -f testpod
+   68  kubectl exec -c testpod2 c003
+   69  kubectl exec  testpod2 c003
+   70  kubectl exec testpod2 c003
+   71  kubectl exec testpod2 -c c003
+   72  kubectl exec testpod2 -c c003 -ls
+   73  kubectl exec testpod2 -c c003 -- ls
+   74  kubectl exec testpod2 -c c003 --
+   75  kubectl exec testpod2 -c c003 -- ls
+   76  kubectl exec testpod2 -c c003 -- ls # go inside container and run a command
+   77  kubectl exec testpod2 -c c003 -- -it  #going inside container and run a command
+   78  kubectl exec testpod2 -c c003 -it  -- /bin/bash # go inside container and run a command
+   79  kubectl exec testpod2 -c c002 -it  -- /bin/bash # go inside container and run a command
+   80  kubectl delte -f testpod2 c003
+   81  delete
+   82  kubectl delte -f testpod2 c003
+   83  yes
+   84  kubectl delete -f testpod2 c003
+   85  kubectl get po
+   86  kubectl delete -f testpod2 c003
+   87  kubectl delete testpod2 c003
+   88  kubectl delete -f testpod2
+   89  kubectl delete -f pod2.yml
+   90  ls
+   91  vi pod3.yml
+   92  kubectl apply -f pod3.yml
+   93  vi pod3.yml
+   94  kubectl apply -f pod3.yml
+   95  vi pod3.yml
+   96  kubectl apply -f pod3.yml
+   97  kubectil describe pod
+   98  kubectl get pod
+   99  kubectl describe pod testpod3
+  100  kubectl delete-f pod3.yml
+  101  kubectl delete -f pod3.yml
+  102  kubectl get pod
+  103  ls
+  104  kubectl delete testpod
+  105  kubectl delete pod testpod
+  106  kubectl delete pod testpod3
+  107  kubectl get pod
+  108  history
+  109  vi pod-test1.yaml
+  110  ls
+  111  vi pod2.yml
+  112  vi pod3.yml
+  113  ls
+  114  minikube start --force
+  115  kubectl get all
+  116  kubectl get po
+  117  clear
+  118  vi podte.yaml
+  119  kubectl apply -f podte.yaml
+  120  vi podte.yaml
+  121  kubectl apply -f podte.yaml
+  122  kubectl get all
+  123  kubectl get po
+  124  kubectl exec pod -c -it /bin/bash
+  125  kubectl exec testingpod -c -it /bin/bash
+  126  kubectl exec testingpod -c -it -- /bin/bash
+  127  kubectl exec testingpod -it -- /bin/bash
+  128  kubectl exec testingpod -c -it -- ls
+  129  kubectl exec testingpod -c  -- ls
+  130  kubectl exec testingpod -c devt  -- ls
+  131  ls
+  132  vi labels1.yaml
+  133  kubectl apply labels1.yaml
+  134  vi labels1.yaml
+  135  kubectl apply labels1.yaml
+  136  kubectl apply -f labels1.yaml
+  137  vi labels1.yaml
+  138  kubectl apply -f labels1.yaml
+  139  kubectl get pods -l day=friday
+  140  kubectl get pods
+  141  kubectl get pods -l day=friday
+  142  kubectl get pods -l day=fri
+  143  kubectl get pods --labels-show
+  144  kubectl get pods --show-labels
+  145  kubectl lables pod testinpod class=k8s
+  146  kubectl label pod testinpod class=k8s
+  147  kubectl label pod testingpod class=k8s
+  148  kubectl get pods --show-labels
+  149  kubectl label pods testingpod name=devenv
+  150  kubectl get pods --show-labels
+  151  kubectl get pods -l class!=ansible
+  152  kubectl get pods -l class in (ansible,k8s)
+  153  kubectl get pods -l class in(ansible,k8s)
+  154  kubectl get pods -l classin(ansible,k8s)
+  155  kubectl get pods -l class in ('ansible,k8s')
+  156  kubectl get pods -l class in'ansible,k8s'
+  157  kubectl get pods -l 'class in('ansible,k8s)'
+  158  kubectl get pods -l 'class in(ansible,k8s)'
+  159  ls
+  160  vi nodelabel.yml
+  161  kubectl get pods --show-labels
+  162  kubectl apply -f nodelabel.yml
+  163  vi nodelabel.yml
+  164  kubectl apply -f nodelabel.yml
+  165  vi nodelabel.yml
+  166  kubectl apply -f nodelabel.yml
+  167  kubectl get pod
+  168  kubectl describe pod nodelabel.yml
+  169  kubectl describe pod nodelabel
+  170  kubectl get nodes
+  171  kubectl label nodes minikube mynode=harpal
+  172  kubectl get nodes
+  173  kubectl describe pod nodelabel
+  174  kubectl get pod
+  175  ls
+  176  git init
+  177  git add.
+  178  git add .
+  179  ls
+  180  mkdir folder1
+  181  cd folder1
+  182  pwd
+  183  cd ..
+  184  mv pod-test1.yaml pod2.yml pod3.yml podte.yaml nodelabel.yml labels1.yaml /root/folder1/
+  185  cd folder1/
+  186  ls
+  187  git init
+  188  cd ..
+  189  history
+

@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+ name: nodelabel
+ labels:
+    name: devt
+    class: k8s
+spec:
+ containers: 
+ - name: c0001
+   image: ubuntu
+ nodeSelector: 
+  mynode: harpal

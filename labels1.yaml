@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: lebels1
+ labels:
+   class: ansible
+   day: fri
+spec:
+ containers: 
+ - name: labelscon
+   image: centos
+
