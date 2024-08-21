@@ -1,0 +1,17 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: replicationtest
+spec:
+  replicas: 2
+  selector:
+    myname: har
+  template:
+    metadata:
+      labels:
+        myname: har
+    spec:
+      containers:
+        - name: harp003
+          image: ubuntu
+

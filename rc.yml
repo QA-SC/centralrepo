@@ -1,0 +1,17 @@
+kind: ReplicationController 
+apiVersion: v1
+metadata:
+   name: myreplicacontroller
+spec:
+ replicas: 2
+ selector:
+     myname: harpal
+ template:
+   metadata:
+    labels:
+      myname: harpal
+   spec: 
+     containers:
+     - name: c0002
+       image: ubuntu
+       command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 4; done"]

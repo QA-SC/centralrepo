@@ -1,0 +1,18 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+ name: myreplication2
+spec:
+ replicas: 2     
+ selector: 
+  myname: hari
+ template:
+  metadata:
+   labels:
+     myname: hari
+  spec: 
+   containers: 
+   - name: cv002
+     image: nginx
+
+

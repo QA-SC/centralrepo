@@ -1,0 +1,17 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+   name: myreplcation3
+spec:
+   replicas: 2
+   selector:
+    myname: karan
+   template:
+    metadata:
+     labels:
+       myname: karan
+    spec:
+     containers:
+     - name: cvwd0004
+       image: centos
+
