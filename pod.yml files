@@ -1,0 +1,46 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: testpod
+spec:
+ containers:
+ - name: c00
+   image: ubuntu
+   command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 8; done"]
+
+
+---------------------------
+kind: Pod
+apiVersion: v1
+metadata:
+   name: testpod2
+   annotations:
+      description: "thisis DEV container"
+spec:
+ containers:
+ - name: c002
+   image: ubuntu
+   command: ["/bin/bash", "-c", "while true; do echo harpalsingh2; sleep 3; done"]
+ - name: c003
+   image: ubuntu
+   command: ["/bin/bash", "-c", "while true; do echo harpalsingh003; sleep 3; done"]
+
+
+------
+
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod3
+  annotations:
+    description: "This is a DEV container"
+spec:
+  containers:
+  - name: dev
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo harpalsingh2; sleep 3; done"]
+    env:
+    - name: MYNAME
+      value: Harpal
+
