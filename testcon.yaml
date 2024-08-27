@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mytest
+spec:
+ containers: 
+ - name: abc011
+   image: ubuntu
+   command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 5; done"]
+ - name: ader003
+   image: nginx 
+   ports:
+   - containerPort: 80

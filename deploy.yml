@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mydeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      myname: harpal
+  template:
+    metadata:
+      labels:
+        myname: harpal
+    spec:
+      containers:
+      - name: conta002
+        image: nginx
+        ports:
+        - containerPort: 80
+
