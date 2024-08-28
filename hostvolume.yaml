@@ -1,0 +1,25 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+   name: volumetest
+spec: 
+ containers:
+  - name: c6
+    image: centos
+    command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 1; done;"]
+    volumeMounts:
+    - name: podvol1
+      mountPath: "/tmp/voldir"
+   
+  - name: c7
+    image: centos
+    command: ["/bin/bash", "-c", "while true; do echo harpal2; sleep 1; done;"]
+    volumeMounts:
+    - name: podvol1
+      mountPath: "/tmp/voldir2"
+
+ volumes:
+ - name: podvol1
+   hostPath:
+     path: /tmp/hostdir
+    
