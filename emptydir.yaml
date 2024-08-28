@@ -1,0 +1,22 @@
+kind: Pod
+apiVersion: v1
+metadata:
+   name: mypod
+spec:
+ containers:
+ - name: c2
+   image: centos
+   command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 1; done;"]
+   volumeMounts:
+    - name: podvol
+      mountPath: "/tmp/c1dir"
+ - name: c3
+   image: centos
+   command: ["/bin/bash", "-c", "while true; do echo harpal2; sleep 1; done;"]
+   volumeMounts:
+    - name: podvol
+      mountPath: "/tmp/c2dir"
+      
+ volumes:
+   - name: podvol
+     emptyDir: {} 

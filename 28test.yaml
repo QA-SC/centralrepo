@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mydeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      myname: harpal
+  template:
+    metadata:
+      labels:
+        myname: harpal
+    spec:
+      containers:
+      - name: c1
+        image: ubuntu
+        command: ["/bin/bash", "-c", "while true; do echo harpal; sleep 1; done;"]
+
